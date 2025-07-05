@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Agricultural inspired color scheme */
+    --background: 43 100% 97%;
+    --foreground: 89 85% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 89 85% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 89 85% 15%;
+
+    /* Green agriculture primary */
+    --primary: 89 85% 25%;
+    --primary-foreground: 43 100% 97%;
+    --primary-light: 89 65% 45%;
+    --primary-dark: 89 85% 15%;
+
+    /* Earth-tone secondary */
+    --secondary: 35 45% 85%;
+    --secondary-foreground: 89 85% 15%;
+
+    --muted: 43 45% 92%;
+    --muted-foreground: 89 25% 45%;
+
+    /* Warm accent */
+    --accent: 42 95% 65%;
+    --accent-foreground: 89 85% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Success and growth colors */
+    --success: 120 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Agricultural gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-earth: linear-gradient(180deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --gradient-growth: linear-gradient(135deg, hsl(var(--success)), hsl(var(--primary)));
+
+    /* Shadows with natural feel */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 30px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 20px 40px hsl(var(--primary) / 0.2);
+
+    --border: 89 25% 85%;
+    --input: 89 25% 90%;
+    --ring: 89 85% 25%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 89 25% 8%;
+    --foreground: 43 80% 92%;
+
+    --card: 89 25% 10%;
+    --card-foreground: 43 80% 92%;
+
+    --popover: 89 25% 10%;
+    --popover-foreground: 43 80% 92%;
+
+    --primary: 89 65% 45%;
+    --primary-foreground: 89 25% 8%;
+    --primary-light: 89 55% 55%;
+    --primary-dark: 89 75% 25%;
+
+    --secondary: 35 25% 15%;
+    --secondary-foreground: 43 80% 92%;
+
+    --muted: 89 15% 12%;
+    --muted-foreground: 43 25% 65%;
+
+    --accent: 42 85% 55%;
+    --accent-foreground: 89 25% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 43 80% 92%;
+
+    --success: 120 50% 50%;
+    --success-foreground: 89 25% 8%;
+
+    --border: 89 15% 20%;
+    --input: 89 15% 18%;
+    --ring: 89 65% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
