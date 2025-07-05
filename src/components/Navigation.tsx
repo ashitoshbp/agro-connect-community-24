@@ -16,7 +16,7 @@ const Navigation = ({ currentView, onViewChange }: NavigationProps) => {
   const navItems = [
     { id: 'dashboard', icon: '🏠', label: 'Home' },
     { id: 'marketplace', icon: '🛒', label: 'Market' },
-    { id: 'myfarm', icon: '🌱', label: 'My Farm' },
+    { id: 'myfarm', icon: '🌱', label: 'Farm' },
     { id: 'schemes', icon: '🏛️', label: 'Schemes' },
     { id: 'loans', icon: '💰', label: 'Loans' },
     { id: 'profile', icon: '👤', label: 'Profile' },
@@ -30,53 +30,55 @@ const Navigation = ({ currentView, onViewChange }: NavigationProps) => {
     <>
       <Card className="fixed bottom-0 left-0 right-0 z-40 rounded-none border-t">
         <CardContent className="p-0">
-          <div className="flex items-center justify-between relative">
+          <div className="flex items-center justify-between relative px-2">
             {/* Left Navigation Items */}
-            <div className="flex flex-1">
+            <div className="flex">
               {leftItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => onViewChange(item.id)}
-                  className={`flex-1 p-4 text-center transition-colors ${
+                  className={`px-2 py-3 text-center transition-colors min-w-0 flex-shrink-0 ${
                     currentView === item.id
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
+                  style={{ minWidth: '60px' }}
                 >
-                  <div className="text-xl mb-1">{item.icon}</div>
-                  <div className="text-xs font-medium">{item.label}</div>
+                  <div className="text-lg mb-1">{item.icon}</div>
+                  <div className="text-[10px] font-medium leading-tight">{item.label}</div>
                 </button>
               ))}
             </div>
 
             {/* Center AI Chat Button */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 -top-6">
+            <div className="absolute left-1/2 transform -translate-x-1/2 -top-6 flex flex-col items-center">
               <Button
                 onClick={() => setIsChatOpen(true)}
                 size="icon"
-                className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 hover:scale-110"
+                className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg transition-all duration-300 hover:scale-110"
               >
-                <MessageCircle className="h-8 w-8 text-white" />
+                <MessageCircle className="h-6 w-6 text-white" />
               </Button>
               <div className="text-center mt-1">
-                <span className="text-xs font-medium text-green-600">AI Chat</span>
+                <span className="text-[10px] font-medium text-green-600">AI Chat</span>
               </div>
             </div>
 
             {/* Right Navigation Items */}
-            <div className="flex flex-1">
+            <div className="flex">
               {rightItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => onViewChange(item.id)}
-                  className={`flex-1 p-4 text-center transition-colors ${
+                  className={`px-2 py-3 text-center transition-colors min-w-0 flex-shrink-0 ${
                     currentView === item.id
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-foreground'
                   }`}
+                  style={{ minWidth: '60px' }}
                 >
-                  <div className="text-xl mb-1">{item.icon}</div>
-                  <div className="text-xs font-medium">{item.label}</div>
+                  <div className="text-lg mb-1">{item.icon}</div>
+                  <div className="text-[10px] font-medium leading-tight">{item.label}</div>
                 </button>
               ))}
             </div>

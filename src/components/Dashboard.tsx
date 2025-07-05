@@ -83,10 +83,10 @@ const Dashboard = () => {
         <div className="absolute inset-0 bg-primary/20" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6">
           <h1 className="text-3xl font-bold mb-2 text-center">
-            Welcome to AgroConnect
+            Project Kisan+
           </h1>
-          <p className="text-lg text-center opacity-90">
-            Your complete agricultural marketplace
+          <p className="text-lg text-center opacity-90 leading-relaxed">
+            A Multi-Agent AI Network for Digital Kranti in Rural India.
           </p>
         </div>
       </div>
